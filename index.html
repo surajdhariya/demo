@@ -1,11 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BidBazaar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #edbf9d;
+            color: rgb(114, 58, 5);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-weight: bold;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        header input {
+            padding: 10px;
+            width: 50%;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        header .user-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        header .user-actions a {
+            color: rgb(99, 23, 23);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #431104, #FEB47B);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: bold;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 20px 0 30px;
+        }
+
+        .hero button {
+            padding: 15px 30px;
+            background-color: white;
+            color: #FF7E5F;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #FEB47B;
+            color: white;
+        }
+
+        /* Categories */
+        .categories {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #ffe6cc;
+        }
+
+        .categories h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .categories .circle-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .categories .circle {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #FF7E5F;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .categories img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .categories p {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Customer Reviews */
+        .reviews {
+            padding: 40px 20px;
+            background-color: #ffe6cc;
+            text-align: center;
+        }
+
+        .reviews h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .review-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .review {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: left;
+        }
+
+        .review p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #FFD700;
+            /* Gold for the stars */
+            font-size: 18px;
+        }
+
+        .review span {
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        footer a {
+            color: #FF7E5F;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>hello worldfffffffffffffffffffffuuu</h1>
+
+    <!--
+     Header 
+    <header>
+        <div class="logo">BidBazaar</div>
+        <input type="text" placeholder="Search for a product or auction">
+        <div class="user-actions">
+            <a href="#reviews">Reviews</a>
+            <a href="#categories">Categories</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </header>
+  -->
+    <header>
+        <div class="logo">BidBazaar</div>
+        <input type="text" placeholder="Search for a product or auction">
+        <div class="user-actions">
+            <span> Help & Contact </span>
+            <a href="#reviews">Reviews</a>
+            <a href="#categories">Categories</a>
+            <a href="signup.html">Sign Up</a>
+            <span></span>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Discover Unique Finds<br>and Rare Treasures</h1>
+        <p>Join BidBazaar and explore the world of antique auctions, unique collectibles, and more!</p>
+        <a href="signup.html"> <button>Start Bidding Now</button> </a>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <h2>Shop by Top Categories</h2>
+        <div class="circle-container">
+            <div>
+                <div class="circle">
+                    <img src="img/Buy South Indian Jewellery Online [ Premium Quality ] - South India Jewels.jpg"
+                        alt="Jewelry">
+                </div>
+                <p>Jewelry</p>
+            </div>
+            <div>
+                <div class="circle">
+                    <img src="img/Retro Antique Telephone Showpiece - Brown.jpg">
+                </div>
+                <p>Telephones</p>
+            </div>
+            <div>
+                <div class="circle">
+                    <img src="img/CISOO Vintage Oval Picture Frame 5x7 Antique Photo Frame Table Top Display and Wall Hanging Home Decor (Bronze Gold).jpg"
+                        alt="Home Decor">
+                </div>
+                <p>Home Decor</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews" id="reviews">
+        <h2>What Our Customers Are Saying</h2>
+        <div class="review-container">
+            <div class="review">
+                <p>"BidBazaar is amazing! I found a beautiful vintage necklace at a great price. Highly recommended!"
+                </p>
+                <div class="stars">★★★★★</div>
+                <span>- Sarah </span>
+            </div>
+            <div class="review">
+                <p>"Great platform for rare collectibles. The bidding process is smooth and fun!"</p>
+                <div class="stars">★★★★☆</div>
+                <span>- vanshu</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 BidBazaar. All Rights Reserved. | <a href="#terms">Terms & Conditions</a></p>
+    </footer>
 </body>
+
 </html>
